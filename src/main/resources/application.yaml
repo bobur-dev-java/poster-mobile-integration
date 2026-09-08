@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: Poster-Integration
+
+  profiles:
+    active:
+      - dev

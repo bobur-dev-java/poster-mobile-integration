@@ -1,0 +1,26 @@
+server:
+  port: 8181
+
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimumIdle: 2
+      maximumPoolSize: 10
+      idleTimeout: 30000
+      maxLifetime: 60000
+      leakDetectionThreshold: 180000
+      connectionTimeout: 120000
+      transaction-isolation: 2
+      auto-commit: false
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+
+  jackson:
+    time-zone: Asia/Tashkent
+

@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/poster_db
+    username: postgres
+    password: 3884
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimumIdle: 2
+      maximumPoolSize: 10
+      idleTimeout: 30000
+      maxLifetime: 60000
+      leakDetectionThreshold: 180000
+      connectionTimeout: 120000
+      transaction-isolation: 2
+      auto-commit: false
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+
+  jackson:
+    time-zone: Asia/Tashkent
+
+app:
+  jwt:
+    secret: 3ed6edd7af21bbdf6fdcea889d0fa5f3595b3b37af25b7a481c6217f43a2ac0e
+    access-token-expiry: 900000
+    refresh-token-expiry: 2592000000
+  url: https://bazapro.uz
+
+logging:
+  level:
+    root: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
