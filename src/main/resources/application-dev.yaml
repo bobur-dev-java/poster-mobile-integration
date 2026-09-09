@@ -17,9 +17,12 @@ spring:
       transaction-isolation: 2
       auto-commit: false
   jpa:
-    show-sql: false
+    show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
 
   jackson:
     time-zone: Asia/Tashkent
@@ -30,7 +33,9 @@ app:
     access-token-expiry: 900000
     refresh-token-expiry: 2592000000
   url: https://bazapro.uz
-
+poster:
+  base-url: https://joinposter.com/api/
+  token: 063256:5621069d5a561e5d5fa9b07d6256ee00
 logging:
   level:
     root: INFO

@@ -71,9 +71,9 @@ public class PlayMobileSmsServiceImpl implements SmsService {
     private SmsRequest.@NonNull Sms getSmsFormat(String otp, Platform platform) {
         String txt;
         if (platform == Platform.ANDROID) {
-            txt = String.format("<#> BazaUZ ilovasiga kirish kodi:  %s %s", otp, APP_HASH_VALUE);
+            txt = String.format("<#> Poster ilovasiga kirish kodi:  %s %s", otp, APP_HASH_VALUE);
         } else if (platform == Platform.IOS) {
-            txt = String.format("BazaUZ ilovasiga kirish kodi: %s", otp);
+            txt = String.format("Poster ilovasiga kirish kodi: %s", otp);
         } else {
             throw new IllegalArgumentException("Platform is unknown");
         }

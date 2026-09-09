@@ -37,78 +37,14 @@ public class SwaggerConfig {
     @Bean
     public List<GroupedOpenApi> apis() {
         return List.of(
-                GroupedOpenApi.builder()
-                        .group("admin")
-                        .pathsToMatch("/api/admin/**")
-                        .build(),
 
-                GroupedOpenApi.builder()
-                        .group("analytics")
-                        .pathsToMatch("/api/analytics/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("users")
-                        .pathsToMatch("/api/users/**")
-                        .build(),
                 GroupedOpenApi.builder()
                         .group("auth")
                         .pathsToMatch("/api/auth/**")
                         .build(),
                 GroupedOpenApi.builder()
-                        .group("brands")
-                        .pathsToMatch("/api/brands/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("categories")
-                        .pathsToMatch("/api/categories/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("conversations")
-                        .pathsToMatch("/api/conversations/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("exchange-rate")
-                        .pathsToMatch("/api/exchange-rate/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("favorites")
-                        .pathsToMatch("/api/favorites/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("files")
-                        .pathsToMatch("/api/files/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("listings")
-                        .pathsToMatch("/api/listings/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("models")
-                        .pathsToMatch("/api/models/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("notifications")
-                        .pathsToMatch("/api/notifications/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("recommendations")
-                        .pathsToMatch("/api/recommendations/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("regions")
-                        .pathsToMatch("/api/regions/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("reports")
-                        .pathsToMatch("/api/reports/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("saved-searches")
-                        .pathsToMatch("/api/saved-searches/**")
-                        .build(),
-                GroupedOpenApi.builder()
-                        .group("sync")
-                        .pathsToMatch("/api/sync/**")
+                        .group("order")
+                        .pathsToMatch("/api/order/**")
                         .build(),
                 GroupedOpenApi.builder()
                         .group("health")

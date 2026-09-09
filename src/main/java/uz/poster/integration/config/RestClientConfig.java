@@ -10,6 +10,7 @@ public class RestClientConfig {
     @Bean
     public RestClient posterRestClient() {
         return RestClient.builder()
+                .baseUrl("https://joinposter.com/api")
                 .build();
     }
 }

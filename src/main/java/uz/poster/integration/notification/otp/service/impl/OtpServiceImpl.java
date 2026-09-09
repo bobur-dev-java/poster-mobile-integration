@@ -38,7 +38,8 @@ public class OtpServiceImpl implements OtpService {
 
         log.info("OTP for {}: {} (expires in {} minutes)", phone, otp, OTP_EXPIRY_MINUTES);
         // TODO: In production, integrate with SMS provider (Eskiz.uz, Playmobile, etc.)
-        smsService.sendOtp(phone, otp, platform);
+        if ("!prod".equals(activeProfile))
+            smsService.sendOtp(phone, otp, platform);
         return otp;
     }
 
